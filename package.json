@@ -27,7 +27,7 @@
     "gulp-imagemin": "^7.1.0",
     "gulp-multi-dest": "^1.3.7",
     "gulp-plumber": "^1.2.1",
-    "gulp-sass": "^4.1.0",
+    "gulp-sass": "^5.1.0",
     "gulp-sass-bulk-importer": "^3.0.1",
     "gulp-sourcemaps": "^3.0.0",
     "gulp-svg-css-pseudo": "^1.0.4",
@@ -40,7 +40,12 @@
     "imagemin-jpeg-recompress": "^7.0.0",
     "imagemin-pngquant": "^9.0.2",
     "require-dir": "^1.2.0",
+    "sass": "^1.55.0",
     "vinyl-ftp": "^0.6.1"
   },
-  "dependencies": {}
+  "dependencies": {
+    "cleave.js": "^1.6.0",
+    "gulp-sass-variables": "^1.2.0",
+    "node-sass": "^7.0.3"
+  }
 }

@@ -1,0 +1,26 @@
+.navbar {
+    padding-top: 20px;
+    display: flex;
+    align-content: center;
+    justify-content: flex-start;
+    align-items: center;
+
+.menu {
+    display: flex;
+    align-content: center;
+    justify-content: flex-start;
+    align-items: center;
+
+    &__link {
+        transition: .3s;
+        color: #546e7a;
+        font-size: 14px;
+        text-decoration: none;
+
+        &:hover {
+            color: #2979ff;
+            transition: .3s;
+        }
+    }
+}
+}
