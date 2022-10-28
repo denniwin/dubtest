@@ -1,14 +1,15 @@
 .feature {
     background-color: #f8f8f8;
     padding-top: 30px;
-
+    padding-bottom: 105px;
+    
     &:before {
         background-image: url(./img/wave.svg);
         z-index: 3;
     }
 }
 
-.card {
+.feature-card {
     display: flex;
     gap: 15px;
     justify-content: space-between;
@@ -26,7 +27,6 @@
         background-color: #fff;
         padding: 25px;
         border-radius: 8px;
-        -webkit-box-shadow: 0 4px 4px 0 rgb(38 50 56 / 10%);
         box-shadow: 0 4px 4px 0 rgb(38 50 56 / 10%);
         align-content: center;
         flex-direction: column;

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 
 <head>
 	<meta charset="UTF-8">
@@ -22,7 +22,7 @@
 				href="css/libs.min.css">
 	<link rel="stylesheet"
 				href="css/style.min.css">
-	<title>Easy-webdev-startpack v3.0</title>
+	<title>DubTest</title>
 </head>
 
 
@@ -33,76 +33,150 @@
             <div class="navbar__logo">
                 <img src="./img/logo.svg" alt="logo" class="navbar__img">
             </div>
-                <div class="menu">
-                    <ul class="menu__item">
-                        <li><a href="#" class="menu__link">С чем помогает Dabster</a></li>
+                    <ul class="menu">
+                        <li class="menu__item"><a href="#" class="menu__link">С чем помогает Dabster</a></li>
+                        <li class="menu__item"><a href="#" class="menu__link">Как это работает</a></li>
+                        <li class="menu__item"><a href="#" class="menu__link">Как начать?</a></li>
                     </ul>
-                    <ul class="menu__item">
-                        <li><a href="#" class="menu__link">Как это работает</a></li>
-                    </ul>
-                    <ul class="menu__item">
-                        <li><a href="#" class="menu__link">Как начать?</a></li>
-                    </ul>
-                </div>
+                    <button class="menu-trigger" id="menu07">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                      </button>
         </div>
     </div>
 </header>
 
-	<section class="hero">
+	<section class="section hero">
     <div class="container">
-        <h1 class="title">Системный подход к</h1>
-        <h1 class="hero__title_step"></h1>
-        <h1 class="title">с помощью цифрового сервиса</h1>
-        <p class="text">Все развитие команды в одной платформе. 
+        <h1 class="section__title">Системный подход к</h1>
+        <h1 class="section__title_step"></h1>
+        <h1 class="section__title">с помощью цифрового сервиса</h1>
+        <p class="hero__text">Все развитие команды в одной платформе. 
             От новичков до опытных</p>
-            <div class="link">
-                <a class="link__item" href="#">Попробовать Dabster</a>
-            </div>
+        <div class="link">
+            <a class="link__item" href="#">Попробовать Dabster</a>
+        </div>
     </div>
-    <img class="wave" src="./img/wave.svg" alt="wave">
+        <div class="wrapper-person">
+            <img src="./img/Teamlead.svg" alt="teamlead" class="wrapper-person__item">
+            <img src="./img/Shiny_Happy_Standing.svg" alt="Shiny_Happy_Standing" class="wrapper-person__item">
+            <img src="./img/Shiny_Happy_Sitting.svg" alt="Shiny_Happy_Sitting" class="wrapper-person__item">
+            <img src="./img/Shiny_Happy_Standing_1.svg" alt="Shiny_Happy_Standing_1" class="wrapper-person__item">
+        </div>
 </section>
 
 	
- <section class="feature">
+ <section class="section feature">
     <div class="container">
-        <h2 class="subtitle">С чем помогает Dabster</h2>
-        <div class="card">
-            <div class="card__item">
-                <div class="card__item-logo"><img src="./img/school.svg" alt="school"></div>
-                <div class="card__item-title">Ускоряем адаптацию новичков</div>
-                <div class="card__item-text">Новичок видит последовательный план развития, цели по развитию и даты ближайшей встречи с наставником</div>
+        <h2 class="section__subtitle">С чем помогает Dabster</h2>
+        <div class="feature-card">
+            <div class="feature-card__item">
+                <div class="feature-card__item-logo"><img src="./img/school.svg" alt="school"></div>
+                <div class="feature-card__item-title">Ускоряем адаптацию новичков</div>
+                <div class="feature-card__item-text">Новичок видит последовательный план развития, цели по развитию и даты ближайшей встречи с наставником</div>
             </div>
-            <div class="card__item">
-                <div class="card__item-logo"><img src="./img/group.svg" alt="group"></div>
-                <div class="card__item-title">Индивидуальные планы развития для опытных</div>
-                <div class="card__item-text">Внедрять индивидуальные планы развития теперь проще. Берем готовые навыки или составляем индивидуальные цели.</div>
+            <div class="feature-card__item">
+                <div class="feature-card__item-logo"><img src="./img/group.svg" alt="group"></div>
+                <div class="feature-card__item-title">Индивидуальные планы развития для опытных</div>
+                <div class="feature-card__item-text">Внедрять индивидуальные планы развития теперь проще. Берем готовые навыки или составляем индивидуальные цели.</div>
             </div>
-            <div class="card__item">
-                <div class="card__item-logo"><img src="./img/insights.svg" alt="insights"></div>
-                <div class="card__item-title">HR аналитика</div>
-                <div class="card__item-text">Вся команда в одном дешборде. Когда ближайшее ревью, сколько навыков освоено, а кем вообще не занимаемся.</div>
+            <div class="feature-card__item">
+                <div class="feature-card__item-logo"><img src="./img/insights.svg" alt="insights"></div>
+                <div class="feature-card__item-title">HR аналитика</div>
+                <div class="feature-card__item-text">Вся команда в одном дешборде. Когда ближайшее ревью, сколько навыков освоено, а кем вообще не занимаемся.</div>
             </div>
         </div>
     </div>
 </section>
-	<footer class="footer">
+	<section class="section instrument">
     <div class="container">
-        <h1 class="title">Готовы попробовать?</h1>
-        <div class="card">
-            <div class="card__item">
-                <div class="card__item-logo">1</div>
-                <div class="card__item-title">Высылаем доступ</div>
-                <div class="card__item-text">Ваш бесплатный доступ на команду из трех человек</div>
+        <h2 class="section__tag">Инструменты Dabster</h2>
+        <h2 class="section__subtitle">Системный подход к адаптации</h2>
+        <div class="content instrument__content">
+            <div class="content__left">
+                <h2 class="content__title">План адаптации автоматически назначается новичку</h2>
+                <p class="section__text">Один раз создаем план адптации. Появился новичок? Автоматически назначается план.</p>
             </div>
-            <div class="card__item">
-                <div class="card__item-logo">2</div>
-                <div class="card__item-title">Создаете знания</div>
-                <div class="card__item-text">Создаете вашу базу знаний навыков</div>
+            <div class="content__right instrument__img">
+                    <img src="./img/idea_1.svg" alt="idea_1" class="instrument__img-item">
+                    <img src="./img/arrow-blue.svg" alt="arrow-blue" class="instrument__img-item">
+                    <img src="./img/new-skill.png" alt="new-skill" class="instrument__img-item">
             </div>
-            <div class="card__item">
-                <div class="card__item-logo">3</div>
-                <div class="card__item-title">Строите план развития</div>
-                <div class="card__item-text">Строите индивидуальные планы развития для своей команды</div>
+        </div>
+        <div class="video-wrapper">
+            <video style="object-fit: cover; background-size: cover; width: 860px; height: 538px; filter: drop-shadow(0px 2px 4px rgba(0, 0, 0, 0.1)) drop-shadow(0px 2px 2px rgba(38, 50, 56, 0.1)) drop-shadow(0px 1px 30px rgba(41, 121, 255, 0.1));
+            border-radius: 16px;" preload="auto" playsinline="" autoplay="" loop="" muted=""> <source src="https://storage.googleapis.com/dabster-production-2/static/skill_creation_desktop.mp4" type="video/mp4"> </video>
+        </div>
+        <img src="./img/skill.png" alt="new-skill" class="instrument__img-item">
+    </div>
+</section>
+	<section class="section adaptiv">
+    <div class="container">
+        <div class="content">
+            <div class="content__left">
+                <h2 class="section__tag" style='padding-top: 0px; font-size: 32px;'>2.</h2>
+                <h2 class="content__title">От адаптации к планам развития</h2>
+                <p class="section__text">В одной платформе. Время избавить от Excel и планов разбросанных по разным системам.</p>
+                <img style="width: 440px; height: 340px" src="./img/Image_2.png" alt="Image_2">
+            </div>
+            <div class="content__right">
+                <video style="object-fit: cover; width: 560px; height: 552px; background-size: cover; border-radius: 0px;" preload="auto" playsinline="" autoplay="" loop="" muted=""> <source src="https://storage.googleapis.com/dabster-production-2/static/skill_assign_desktop.mp4" type="video/mp4"> </video>
+            </div>
+        </div>
+    </div>
+</section>
+	<section class="section">
+    <div class="container">
+        <div class="content">
+            <div class="content__left dashboard">
+                <h2 class="dashboard__tag">3.</h2>
+                <h2 class="content__title">От адаптации к планам развития</h2>
+                <p class="section__text">Видим всю команду. На каком этапе развития, что пройдено, а что нет.
+                    Даты ближайшего ревью и профиль навыков позволяет планировать развитие.</p>
+                <img class="dashboard__item" style="width: 240px; height: 327px" src="./img/skill-progress.png" alt="Image_2">
+                <img class="dashboard__item" src="./img/Combined-Shape.svg" alt="Combined-Shape">
+                <img class="dashboard__item" src="./img/arrow-blue-2.svg" alt="arrow-blue-2">
+            </div>
+            <div class="content__right">
+                <img src="./img/Shiny_Happy_Stats_an.svg"  style="width: 580px; height: 580px"  alt="Shiny_Happy_Stats_an">
+            </div>
+        </div>
+    </div>
+</section>
+	<section class="section rating">
+    <div class="container">
+        <div class="content">
+            <div class="content__left side-text">
+                <h2 class="content__title" style="color:#fff;" >Оценивайте прогресс развития</h2>
+                <p class="section__text" style="color:#fff;">Не достаточно просто что-то изучить. Система оценки позволит видеть, кто из команды работает над развитием, а кто подзавяз в рутине.</p>
+            </div>
+            <div class="content__right">
+                <img src="./img/Image_3.svg"  style="width: 320px; height: 300px"  alt="Image_3">
+            </div>
+        </div> 
+        <video style="object-fit: cover; background-size: cover; width: 1160px; height: 405px;
+border-radius: 0px;" preload="auto" playsinline="" autoplay="" loop="" muted=""> <source src="https://storage.googleapis.com/dabster-production-2/static/skill_evaluation_desktop.mp4" type="video/mp4"> </video>
+    </div>
+</section>
+	<section class="section footer">
+    <div class="container">
+        <h1 class="section__title section__title-white">Готовы попробовать?</h1>
+        <div class="footer-card">
+            <div class="footer-card__item">
+                <div class="footer-card__item-logo">1</div>
+                <div class="footer-card__item-title">Высылаем доступ</div>
+                <div class="footer-card__item-text">Ваш бесплатный доступ на команду из трех человек</div>
+            </div>
+            <div class="footer-card__item">
+                <div class="footer-card__item-logo">2</div>
+                <div class="footer-card__item-title">Создаете знания</div>
+                <div class="footer-card__item-text">Создаете вашу базу знаний навыков</div>
+            </div>
+            <div class="footer-card__item">
+                <div class="footer-card__item-logo">3</div>
+                <div class="footer-card__item-title">Строите план развития</div>
+                <div class="footer-card__item-text">Строите индивидуальные планы развития для своей команды</div>
             </div>
         </div>
 
@@ -110,7 +184,7 @@
             <a class="link__item" href="#">Получить доступ</a>
         </div>
     </div>
-</footer>
+</section>
 
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 <script src="https://snipp.ru/cdn/jqueryui/1.12.1/jquery-ui.min.js"></script>

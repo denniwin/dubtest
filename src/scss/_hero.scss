@@ -1,17 +1,13 @@
 .hero {
-    padding-top: 60px;
-
-    &__title_step {
-        color: #2979ff;
-        text-align: center;
-        font-size: 60px;
-        line-height: 75px;
-        font-weight: 700;
-        letter-spacing: -0.5px;
-
-        &::before {
-            content: '→';
-        }
+    &__text {
+            padding-bottom: 30px;
+            margin: 0 auto;
+            white-space: normal;
+            max-width: 450px;
+            text-align: center;
+            font-size: 20px;
+            color: #546e7a;
+            line-height: 1.5;
     }
 
     .typed-cursor {
@@ -19,15 +15,7 @@
     }
 }
 
-.wave {
-    margin-bottom: -10px;
-    max-width: 100%;
-    z-index: -10;
-}
-
 .link {
-    padding-top: 30px;
-    padding-bottom: 30px;
     text-align: center;
 
     &__item {
@@ -56,3 +44,36 @@
 }
 }
 
+.wrapper-person {
+    background-image: url(/img/wave.svg);
+    background-repeat: no-repeat;
+    background-position-y: bottom;
+    max-width: 100%;
+    position: relative;
+    z-index: -10;
+    padding-top: 450px;
+
+    &__item {
+        position: absolute;
+
+        &:nth-child(1) {
+            left: 200px;
+            bottom: 10px;
+        }
+    
+        &:nth-child(2) {
+            bottom: 10px;
+            left: 600px;
+        }
+    
+        &:nth-child(3) {
+            bottom: 10px;
+            left: 765px;
+        }
+    
+        &:nth-child(4) {
+            bottom: 10px;
+            right: 250px;
+    }
+    }
+    }
