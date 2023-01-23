@@ -11,19 +11,24 @@
 
 .feature-card {
     display: flex;
-    gap: 15px;
+    gap: 50px;
+    padding: 30px;
     justify-content: space-between;
     align-items: center;
-    padding-top: 30px;
     padding-bottom: 30px;
+
+    @media (max-width: 900px) {
+        gap: 15px;
+        flex-wrap: wrap;
+        padding: 40px;
+    }
 
     &__item {
 
         display: flex;
         flex-wrap: wrap;
         align-items: flex-start;
-        width: 360px;
-        min-height: 270px;
+        min-height: 290px;
         background-color: #fff;
         padding: 25px;
         border-radius: 8px;
@@ -31,17 +36,23 @@
         align-content: center;
         flex-direction: column;
         justify-content: space-around;
+        transition: .3s;
 
-        &-title {
-            color: #2979ff;
-            font-size: 20px;
-            font-weight: 600;
-            line-height: 25px;
+        &:hover {
+            transition: .3s;
+            transform: scale(1.05);
         }
-        
-        &-text {
-            letter-spacing: 0.5px;
-        }
+    }
+
+    &__title {
+        color: #2979ff;
+        font-size: 20px;
+        font-weight: 600;
+        line-height: 25px;
+    }
+    
+    &__text {
+        letter-spacing: 0.5px;
     }
 
 

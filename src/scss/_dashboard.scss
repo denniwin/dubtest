@@ -1,22 +1,30 @@
-.dashboard {
+.dashboard-left {
     position: relative;
     padding-bottom: 210px;
+    padding-top: 60px;
+
+    @media (max-width: 768px) {
+        padding-bottom: 10px;
+    }
 
     &__tag {
-        padding-bottom: 0px;
-		padding-top: 60px;
 		font-size: 32px;
 		color: #2979ff;
     }
+
     &::after {
         color: #263238;
         position: absolute;
-        bottom: 400px;
-        right: 120px;
+        bottom: 420px;
+        left: 250px;
         font-weight: 600;
         font-size: 14px;
         width: 160px;
         content: 'Карточка навыка, который проходит тиммейт';
+
+        @media (max-width: 1236px) {
+            display: none;
+        }
     }
 
     &__item {
@@ -24,12 +32,22 @@
         &:nth-of-type(1) {
             padding-top: 20px;
             padding-left: 20px;
+            width: 240px;
+            height: 327px;
+    
+            @media (max-width: 768px) {
+                display: none;
+            }
         }
 
         &:nth-of-type(2) {
             position: absolute;
             left: 0px;
             animation: animate_left-arrow 5s infinite;
+
+            @media (max-width: 1236px) {
+                display: none;
+            }
         }
 
         &:nth-of-type(3) {
@@ -37,7 +55,17 @@
             left: 250px;
             bottom: 45%;
             animation: animate-right-arrow 3s infinite;
+
+            @media (max-width: 1236px) {
+                display: none;
+            }
         }
+    }
+}
+
+.dashboard-right {
+    img {
+        width: 100%;
     }
 }
 

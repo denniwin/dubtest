@@ -1,7 +1,6 @@
 .hero {
     &__text {
-            padding-bottom: 30px;
-            margin: 0 auto;
+            margin: 30px auto;
             white-space: normal;
             max-width: 450px;
             text-align: center;
@@ -17,6 +16,7 @@
 
 .link {
     text-align: center;
+    margin-bottom: 50px;
 
     &__item {
         padding: 15px;
@@ -32,11 +32,12 @@
         background-position: center center;
         border-color: transparent;
         border-style: solid;
-        box-shadow: 0 0 60px 35px rgb(41 121 255 / 15%);
-        transition: .5s;
+        box-shadow: 0 0 17px 17px rgb(41 121 255 / 15%);
+        transition: 1s;
 
         &:hover {
-            transition: .5s;
+            filter: hue-rotate(360deg);
+            transition: 5s;
             background-color: #1565c0;
             background-image: none;
             color: #ffffff;
@@ -44,36 +45,22 @@
 }
 }
 
-.wrapper-person {
+.person {
     background-image: url(/img/wave.svg);
     background-repeat: no-repeat;
     background-position-y: bottom;
     max-width: 100%;
     position: relative;
     z-index: -10;
-    padding-top: 450px;
 
-    &__item {
-        position: absolute;
+    @media (max-width: 768px) {
+        display: none;
+    }
 
-        &:nth-child(1) {
-            left: 200px;
-            bottom: 10px;
-        }
-    
-        &:nth-child(2) {
-            bottom: 10px;
-            left: 600px;
-        }
-    
-        &:nth-child(3) {
-            bottom: 10px;
-            left: 765px;
-        }
-    
-        &:nth-child(4) {
-            bottom: 10px;
-            right: 250px;
+    &__list {
+    display: flex;
+    justify-content: space-around;
+    align-content: center;
+    align-items: flex-end;
     }
-    }
-    }
+    }   

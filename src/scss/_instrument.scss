@@ -1,10 +1,10 @@
 .instrument {
     background-color: #e3f2fd;
     padding-bottom: 70px;
+    padding-top: 60px;
     position: relative;
 
     &__content {
-        padding-top: 0px;
         padding-bottom: 70px;
     }
 
@@ -42,9 +42,23 @@
         position: absolute;
         right: 190px;
         bottom: -50px;
+
+        @media (max-width: 1236px) {
+            display: none;
+        }
     }
 }
 
+.video-wrapper {
+
+    video {
+        width: 860px;
+
+        @media (max-width: 1236px) {
+            width: 100%;
+        }
+    }
+}
 
 @keyframes animate {
 	0% {

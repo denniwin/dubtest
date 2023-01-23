@@ -18,6 +18,10 @@
 	<link rel="shortcut icon"
 				href="img/favicons/favicon.png"
 				type="image/x-icon">
+	<link rel="stylesheet" 
+				href="https://snipp.ru/cdn/fancybox/3.5.7/jquery.fancybox.min.css">
+	<link rel="stylesheet" 
+				href="css/animate.css">
 	<link rel="stylesheet"
 				href="css/libs.min.css">
 	<link rel="stylesheet"
@@ -27,22 +31,20 @@
 
 
 <body>
-	<header>
+	<header class="header">
     <div class="container">
         <div class="navbar">
             <div class="navbar__logo">
                 <img src="./img/logo.svg" alt="logo" class="navbar__img">
             </div>
                     <ul class="menu">
-                        <li class="menu__item"><a href="#" class="menu__link">С чем помогает Dabster</a></li>
-                        <li class="menu__item"><a href="#" class="menu__link">Как это работает</a></li>
-                        <li class="menu__item"><a href="#" class="menu__link">Как начать?</a></li>
+                        <li class="menu__item"><a href="#feature" class="menu__link" data-scroll>С чем помогает программа</a></li>
+                        <li class="menu__item"><a href="#howwork" class="menu__link" data-scroll>Как это работает</a></li>
+                        <li class="menu__item"><a href="#ready" class="menu__link" data-scroll>Как начать?</a></li>
                     </ul>
-                    <button class="menu-trigger" id="menu07">
+                    <div class="burger">
                         <span></span>
-                        <span></span>
-                        <span></span>
-                      </button>
+                    </div>
         </div>
     </div>
 </header>
@@ -55,44 +57,95 @@
         <p class="hero__text">Все развитие команды в одной платформе. 
             От новичков до опытных</p>
         <div class="link">
-            <a class="link__item" href="#">Попробовать Dabster</a>
+            <a id="btn" class="link__item" href="#">Попробовать Dabster</a>
         </div>
     </div>
-        <div class="wrapper-person">
-            <img src="./img/Teamlead.svg" alt="teamlead" class="wrapper-person__item">
-            <img src="./img/Shiny_Happy_Standing.svg" alt="Shiny_Happy_Standing" class="wrapper-person__item">
-            <img src="./img/Shiny_Happy_Sitting.svg" alt="Shiny_Happy_Sitting" class="wrapper-person__item">
-            <img src="./img/Shiny_Happy_Standing_1.svg" alt="Shiny_Happy_Standing_1" class="wrapper-person__item">
-        </div>
+    <div class="person hero__person">
+       <div class="container person__list">
+        
+        <img src="./img/Shiny_Happy_Standing.svg" alt="Shiny_Happy_Standing" class="person__item">
+        <img src="./img/Shiny_Happy_Sitting.svg" alt="Shiny_Happy_Sitting" class="person__item">
+        <img src="./img/Shiny_Happy_Standing_1.svg" alt="Shiny_Happy_Standing_1" class="person__item">
+       </div>
+    </div>
 </section>
 
-	
- <section class="section feature">
+	<section class="section modal wow fadeInUp">
     <div class="container">
-        <h2 class="section__subtitle">С чем помогает Dabster</h2>
+        <div style="display: none; width: 500px;" id="hidden">
+            <h3 style="text-align: center; padding-bottom: 10px;">Оставьте заявку</h3>
+            <form class="order">
+                <div class="order__row order__row_name">
+                    <div class="field">
+                        <label class="field__label" for="name">Ваше имя</label>
+                        <div class="field__content">
+                            <input class="field__control" name="name" id="name" type="text" required>
+                            <span class="field__indicator indicator">
+                                <svg class="indicator__error" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M18 6L6 18M6 6L18 18" stroke="#DC3545" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                <svg class="indicator__success" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M20 6L9 17L4 12" stroke="#28A745" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                        </svg>
+                                                
+                            </span>
+                        </div> 
+                    </div>
+                </div>
+        
+                    <div class="order__row order__row_contacts">
+                        <div class="field">
+                            <label class="field__label" for="phone">Телефон</label>
+                            <div class="field__content">
+                                <input class="field__control" id="phone" name="phone" type="text" placeholder="+7" required>
+                                <span class="field__indicator indicator">
+                                    <svg class="indicator__error" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M18 6L6 18M6 6L18 18" stroke="#DC3545" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                        </svg>
+        
+                                    <svg class="indicator__success" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M20 6L9 17L4 12" stroke="#28A745" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                            </svg>
+                                                    
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                
+                    <div class="order__row order-center">
+                            <button class="order__submit" type="submit">Отправить заявку</button>
+                    </div>
+            </form>
+        </div>
+    </div>
+</section>
+	
+ <section class="section feature wow fadeInUp">
+    <div class="container">
+        <h2 id="feature" class="title">С чем помогает Dabster</h2>
         <div class="feature-card">
-            <div class="feature-card__item">
-                <div class="feature-card__item-logo"><img src="./img/school.svg" alt="school"></div>
-                <div class="feature-card__item-title">Ускоряем адаптацию новичков</div>
-                <div class="feature-card__item-text">Новичок видит последовательный план развития, цели по развитию и даты ближайшей встречи с наставником</div>
+            <div class="feature-card__item wow bounceInLeft" data-wow-duration="1.5s" data-wow-delay="0.5s" data-wow-offset="5">
+                <div class="feature-card__logo"><img src="./img/school.svg" alt="school"></div>
+                <div class="feature-card__title">Ускоряем адаптацию новичков</div>
+                <div class="feature-card__text">Новичок видит последовательный план развития, цели по развитию и даты ближайшей встречи с наставником</div>
             </div>
-            <div class="feature-card__item">
-                <div class="feature-card__item-logo"><img src="./img/group.svg" alt="group"></div>
-                <div class="feature-card__item-title">Индивидуальные планы развития для опытных</div>
-                <div class="feature-card__item-text">Внедрять индивидуальные планы развития теперь проще. Берем готовые навыки или составляем индивидуальные цели.</div>
+            <div class="wow bounceInUp feature-card__item" data-wow-duration="1.5s" data-wow-delay="0.5s" data-wow-offset="5">
+                <div class="feature-card__logo"><img src="./img/group.svg" alt="group"></div>
+                <div class="feature-card__title">Индивидуальные планы развития для опытных</div>
+                <div class="feature-card__text">Внедрять индивидуальные планы развития теперь проще. Берем готовые навыки или составляем индивидуальные цели.</div>
             </div>
-            <div class="feature-card__item">
-                <div class="feature-card__item-logo"><img src="./img/insights.svg" alt="insights"></div>
-                <div class="feature-card__item-title">HR аналитика</div>
-                <div class="feature-card__item-text">Вся команда в одном дешборде. Когда ближайшее ревью, сколько навыков освоено, а кем вообще не занимаемся.</div>
+            <div class="wow bounceInRight feature-card__item" data-wow-duration="1.5s" data-wow-delay="0.5s" data-wow-offset="5">
+                <div class="feature-card__logo"><img src="./img/insights.svg" alt="insights"></div>
+                <div class="feature-card__title">HR аналитика</div>
+                <div class="feature-card__text">Вся команда в одном дешборде. Когда ближайшее ревью, сколько навыков освоено, а кем вообще не занимаемся.</div>
             </div>
         </div>
     </div>
 </section>
-	<section class="section instrument">
+	<section class="section instrument wow fadeInUp">
     <div class="container">
-        <h2 class="section__tag">Инструменты Dabster</h2>
-        <h2 class="section__subtitle">Системный подход к адаптации</h2>
+        <h5 id="howwork" class="section__tag">Инструменты Dabster</h5>
+        <h2 class="title">Системный подход к адаптации</h2>
         <div class="content instrument__content">
             <div class="content__left">
                 <h2 class="content__title">План адаптации автоматически назначается новичку</h2>
@@ -105,78 +158,77 @@
             </div>
         </div>
         <div class="video-wrapper">
-            <video style="object-fit: cover; background-size: cover; width: 860px; height: 538px; filter: drop-shadow(0px 2px 4px rgba(0, 0, 0, 0.1)) drop-shadow(0px 2px 2px rgba(38, 50, 56, 0.1)) drop-shadow(0px 1px 30px rgba(41, 121, 255, 0.1));
+            <video style="filter: drop-shadow(0px 2px 4px rgba(0, 0, 0, 0.1)) drop-shadow(0px 2px 2px rgba(38, 50, 56, 0.1)) drop-shadow(0px 1px 30px rgba(41, 121, 255, 0.1));
             border-radius: 16px;" preload="auto" playsinline="" autoplay="" loop="" muted=""> <source src="https://storage.googleapis.com/dabster-production-2/static/skill_creation_desktop.mp4" type="video/mp4"> </video>
         </div>
         <img src="./img/skill.png" alt="new-skill" class="instrument__img-item">
     </div>
 </section>
-	<section class="section adaptiv">
+	<section class="section adaptiv wow fadeInUp">
     <div class="container">
         <div class="content">
             <div class="content__left">
-                <h2 class="section__tag" style='padding-top: 0px; font-size: 32px;'>2.</h2>
+                <h3 class="section__tag">2.</h3>
                 <h2 class="content__title">От адаптации к планам развития</h2>
                 <p class="section__text">В одной платформе. Время избавить от Excel и планов разбросанных по разным системам.</p>
-                <img style="width: 440px; height: 340px" src="./img/Image_2.png" alt="Image_2">
+                <img class="adaptiv__img" src="./img/Image_2.png" alt="Image_2">
             </div>
             <div class="content__right">
-                <video style="object-fit: cover; width: 560px; height: 552px; background-size: cover; border-radius: 0px;" preload="auto" playsinline="" autoplay="" loop="" muted=""> <source src="https://storage.googleapis.com/dabster-production-2/static/skill_assign_desktop.mp4" type="video/mp4"> </video>
+                <video style="width: 100%;" preload="auto" playsinline="" autoplay="" loop="" muted=""> <source src="https://storage.googleapis.com/dabster-production-2/static/skill_assign_desktop.mp4" type="video/mp4"> </video>
             </div>
         </div>
     </div>
 </section>
-	<section class="section">
+	<section class="section wow fadeInUp">
     <div class="container">
         <div class="content">
-            <div class="content__left dashboard">
-                <h2 class="dashboard__tag">3.</h2>
+            <div class="content__left dashboard-left">
+                <h3 class="section__tag">3.</h3>
                 <h2 class="content__title">От адаптации к планам развития</h2>
                 <p class="section__text">Видим всю команду. На каком этапе развития, что пройдено, а что нет.
                     Даты ближайшего ревью и профиль навыков позволяет планировать развитие.</p>
-                <img class="dashboard__item" style="width: 240px; height: 327px" src="./img/skill-progress.png" alt="Image_2">
-                <img class="dashboard__item" src="./img/Combined-Shape.svg" alt="Combined-Shape">
-                <img class="dashboard__item" src="./img/arrow-blue-2.svg" alt="arrow-blue-2">
+                <img class="dashboard-left__item" src="./img/skill-progress.png" alt="Image_2">
+                <img class="dashboard-left__item" src="./img/Combined-Shape.svg" alt="Combined-Shape">
+                <img class="dashboard-left__item" src="./img/arrow-blue-2.svg" alt="arrow-blue-2">
             </div>
-            <div class="content__right">
-                <img src="./img/Shiny_Happy_Stats_an.svg"  style="width: 580px; height: 580px"  alt="Shiny_Happy_Stats_an">
+            <div class="content__right dashboard-right">
+                <img src="./img/Shiny_Happy_Stats_an.svg" alt="Shiny_Happy_Stats_an">
             </div>
         </div>
     </div>
 </section>
-	<section class="section rating">
+	<section class="section rating wow fadeInUp">
     <div class="container">
         <div class="content">
             <div class="content__left side-text">
-                <h2 class="content__title" style="color:#fff;" >Оценивайте прогресс развития</h2>
-                <p class="section__text" style="color:#fff;">Не достаточно просто что-то изучить. Система оценки позволит видеть, кто из команды работает над развитием, а кто подзавяз в рутине.</p>
+                <h2 class="content__title white" >Оценивайте прогресс развития</h2>
+                <p class="section__text white">Не достаточно просто что-то изучить. Система оценки позволит видеть, кто из команды работает над развитием, а кто подзавяз в рутине.</p>
             </div>
             <div class="content__right">
                 <img src="./img/Image_3.svg"  style="width: 320px; height: 300px"  alt="Image_3">
             </div>
         </div> 
-        <video style="object-fit: cover; background-size: cover; width: 1160px; height: 405px;
-border-radius: 0px;" preload="auto" playsinline="" autoplay="" loop="" muted=""> <source src="https://storage.googleapis.com/dabster-production-2/static/skill_evaluation_desktop.mp4" type="video/mp4"> </video>
+        <video style="width: 100%;" preload="auto" playsinline="" autoplay="" loop="" muted=""> <source src="https://storage.googleapis.com/dabster-production-2/static/skill_evaluation_desktop.mp4" type="video/mp4"> </video>
     </div>
 </section>
-	<section class="section footer">
+	<section class="section footer wow fadeInUp">
     <div class="container">
-        <h1 class="section__title section__title-white">Готовы попробовать?</h1>
+        <h1 id="ready" class="section__title white wow fadeInDown" data-wow-duration="2.5s">Готовы попробовать?</h1>
         <div class="footer-card">
-            <div class="footer-card__item">
-                <div class="footer-card__item-logo">1</div>
-                <div class="footer-card__item-title">Высылаем доступ</div>
-                <div class="footer-card__item-text">Ваш бесплатный доступ на команду из трех человек</div>
+            <div class="footer-card__item wow bounceInLeft" data-wow-duration="1.5s" data-wow-delay="0.5s">
+                <div class="footer-card__logo">1</div>
+                <div class="footer-card__title">Высылаем доступ</div>
+                <div class="footer-card__text">Ваш бесплатный доступ на команду из трех человек</div>
             </div>
-            <div class="footer-card__item">
-                <div class="footer-card__item-logo">2</div>
-                <div class="footer-card__item-title">Создаете знания</div>
-                <div class="footer-card__item-text">Создаете вашу базу знаний навыков</div>
+            <div class="footer-card__item wow bounceInLeft" data-wow-duration="1.5s" data-wow-delay="1.0s">
+                <div class="footer-card__logo">2</div>
+                <div class="footer-card__title">Создаете знания</div>
+                <div class="footer-card__text">Создаете вашу базу знаний навыков</div>
             </div>
-            <div class="footer-card__item">
-                <div class="footer-card__item-logo">3</div>
-                <div class="footer-card__item-title">Строите план развития</div>
-                <div class="footer-card__item-text">Строите индивидуальные планы развития для своей команды</div>
+            <div class="footer-card__item wow bounceInLeft" data-wow-duration="1.5s" data-wow-delay="1.5s">
+                <div class="footer-card__logo">3</div>
+                <div class="footer-card__title">Строите план развития</div>
+                <div class="footer-card__text">Строите индивидуальные планы развития для своей команды</div>
             </div>
         </div>
 
@@ -186,21 +238,17 @@ border-radius: 0px;" preload="auto" playsinline="" autoplay="" loop="" muted="">
     </div>
 </section>
 
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+	<script src="https://snipp.ru/cdn/jquery/2.1.1/jquery.min.js"></script>
+<script src="https://snipp.ru/cdn/fancybox/3.5.7/jquery.fancybox.min.js"></script>
 <script src="https://snipp.ru/cdn/jqueryui/1.12.1/jquery-ui.min.js"></script>
 <script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/jquery.validate.min.js"></script>
 <script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/additional-methods.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/cleave.js/1.6.0/cleave.min.js"></script>
-<script src="https://snipp.ru/cdn/fancybox/3.5.7/jquery.fancybox.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+<script src="./js/wow.js"></script>
 <script src="./js/main.min.js"></script>
-<script src="./js/main.js"></script>
-
-
-
-
 </body>
 
 </html>

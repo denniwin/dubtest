@@ -1,0 +1,49 @@
+<section class="section modal wow fadeInUp">
+    <div class="container">
+        <div style="display: none; width: 500px;" id="hidden">
+            <h3 style="text-align: center; padding-bottom: 10px;">Оставьте заявку</h3>
+            <form class="order">
+                <div class="order__row order__row_name">
+                    <div class="field">
+                        <label class="field__label" for="name">Ваше имя</label>
+                        <div class="field__content">
+                            <input class="field__control" name="name" id="name" type="text" required>
+                            <span class="field__indicator indicator">
+                                <svg class="indicator__error" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M18 6L6 18M6 6L18 18" stroke="#DC3545" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                <svg class="indicator__success" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M20 6L9 17L4 12" stroke="#28A745" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                        </svg>
+                                                
+                            </span>
+                        </div> 
+                    </div>
+                </div>
+        
+                    <div class="order__row order__row_contacts">
+                        <div class="field">
+                            <label class="field__label" for="phone">Телефон</label>
+                            <div class="field__content">
+                                <input class="field__control" id="phone" name="phone" type="text" placeholder="+7" required>
+                                <span class="field__indicator indicator">
+                                    <svg class="indicator__error" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M18 6L6 18M6 6L18 18" stroke="#DC3545" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                        </svg>
+        
+                                    <svg class="indicator__success" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M20 6L9 17L4 12" stroke="#28A745" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                            </svg>
+                                                    
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                
+                    <div class="order__row order-center">
+                            <button class="order__submit" type="submit">Отправить заявку</button>
+                    </div>
+            </form>
+        </div>
+    </div>
+</section>

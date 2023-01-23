@@ -46,6 +46,7 @@
   "dependencies": {
     "cleave.js": "^1.6.0",
     "gulp-sass-variables": "^1.2.0",
-    "node-sass": "^7.0.3"
+    "node-sass": "^7.0.3",
+    "wow.js": "^1.2.2"
   }
 }
